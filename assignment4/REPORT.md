@@ -11,7 +11,7 @@
 | Metrics | Character comparisons counted inside algorithms, including KMP preprocessing, measure work. Median time in milliseconds measures practical cost. |
 | Runs | Seed `42`; JVM warm-up, then three warm-up calls and three measured calls per case. Input generation and CSV writing are outside timing. Inputs and counts are reproducible; times vary. |
 | Predictions | Recursive edit grows exponentially; DP comparisons grow as `n²`. Random search is approximately linear; the chosen worst case is quadratic for Naive and linear for KMP because `m` grows with `n`. |
-| Plots | Comparison counts and median times versus `n` for each family, split by input type, using logarithmic axes. |
+| Plots | Comparison counts and median times versus `n` for each family, split by input type, using a linear X axis with evenly spaced ticks and a logarithmic Y axis. |
 | Revision | The initial plan preceded measurement. To reduce scope, five measured runs became three and each algorithm retained four sizes; measurements were rerun. |
 
 Data: [results/results.csv](results/results.csv), **120 rows = 5 algorithms × 2 input types × 4 sizes × 3 runs**. Recursive and DP sizes differ, so their times are not directly comparable.

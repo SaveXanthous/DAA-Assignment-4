@@ -19,8 +19,7 @@ public class TwoRowEditDistance implements EditDistance {
                 if (a.charAt(i - 1) == b.charAt(j - 1)) {
                     current[j] = previous[j - 1];
                 } else {
-                    current[j] = 1 + Math.min(previous[j],
-                            Math.min(current[j - 1], previous[j - 1]));
+                    current[j] = 1 + Math.min(previous[j], Math.min(current[j - 1], previous[j - 1]));
                 }
             }
             int[] temp = previous;
